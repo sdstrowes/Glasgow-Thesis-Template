@@ -1,0 +1,129 @@
+
+\documentclass[a4,oneside]{glasgowthesis}
+% ^^ draft shows overfilled boxes...
+
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{mcaption}
+\usepackage[font=scriptsize]{subfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%\usepackage{natbib}
+
+\usepackage{color}
+\usepackage{changebar}
+\usepackage{soul}
+
+\hyphenation{Internet analysis analyse}
+
+\newcommand\TLSins[1]{
+  \cbstart{}
+  {
+    \color{blue}
+    \ul{#1}
+  }
+  \cbend{}
+}
+
+\newcommand\TLSdel[1]{
+  \cbdelete{}
+  {
+    \color{red}
+    \st{#1}
+  }
+}
+\usepackage{fancyhdr}                    % Fancy Header and Footer
+\pagestyle{fancy}                       % Sets fancy header and footer
+\fancyfoot{}                            % Delete current footer settings
+\renewcommand{\headrulewidth}{0.2pt}
+\fancyhead[LE,RO]{\bfseries\thepage}    % Page number (boldface): left-even, right-odd
+%\fancyhead[RE]{\bfseries\nouppercase{\leftmark}}      % Chapter in the right on even pages
+\fancyhead[LO]{\bfseries\nouppercase{\rightmark}}     % Section in the left on odd pages
+
+
+% \setlength{\headheight}{14pt}        % adjust for fancyhdr warning
+% \pagestyle{fancy}                    % clear all header and footer fields
+% \fancyhf{}
+% \fancyhead[L]{\slshape \rightmark}   % put section heading left
+% \fancyhead[R]{\thepage}              % put page number right
+
+% % redefine "plain" to fix page numbering (on first page of chapters)
+\fancypagestyle{plain} { %
+   \fancyhf{}                           % clear all header and footer fields
+   \fancyhead[L]{\slshape \rightmark}  % no section heading for these pages
+   \fancyhead[R]{\bfseries\thepage}
+   \renewcommand{\headrulewidth}{0pt}   % no headrule for these pages
+   \renewcommand{\footrulewidth}{0pt}
+}
+
+
+\newenvironment{codelisting}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
+{\end{list}}
+
+\newcommand{\note}[1]{\emph{\textbf{Note:}[#1]}}
+
+% =============================================================================
+\begin{document}
+
+\title{Compact Routing for the \\ Future Internet}
+\author{Stephen D. Strowes}
+\date{\today}
+
+\maketitle
+
+\newpage
+
+\input{"abstract.tex"} 
+%\addcontentsline{toc}{chapter}{Abstract}
+
+\newpage
+\input{"acknowledgements.tex"} 
+%\addcontentsline{toc}{chapter}{Acknowledgments}
+
+\newpage
+\vspace*{1.75in}
+\begin{center} Dedication.\end{center}
+\begin{center} (Is what you need.)\end{center}
+
+
+%\pagenumbering{roman}
+%\setcounter{page}{1}
+
+% -----------------------------------------------------------------------------
+%\newpage
+
+%\vspace*{1.75in}
+%\begin{center} {\bf Education Use Consent}\end{center}
+%\noindent I hereby give my permission for this project to be shown to other
+%University of Glasgow students and to be distributed in an electronic
+%format. {\bf Please note that you are under no obligation to sign this
+%  declaration, but doing so would help future students. }
+
+%\begin{description}
+%\item [Stephen D. Strowes]\ \\ \ \\ \ \\
+%\HRule
+%\end{description}
+%\addcontentsline{toc}{chapter}{Education Use Consent}
+
+% -----------------------------------------------------------------------------
+%\newpage
+
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+%\newpage
+%\thispagestyle{empty}
+\tableofcontents
+\listoftables
+\listoffigures
+
+% -----------------------------------------------------------------------------
+\newpage
+% Reset page numbering
+\pagenumbering{arabic}
+\setcounter{page}{1}
