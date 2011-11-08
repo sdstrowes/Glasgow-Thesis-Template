@@ -48,27 +48,26 @@
 % Left margin: 1.5cm
 % Right margin: 1.5cm
 % + 2.5cm gutter, making 4.0cm on the binding edge.
-% 
-% side margin is 1" + whatever is set here. 1" == 2.54cm. So to
-% meet the 4.0cm of margin + gutter, set side margins to 1.46cm.
-% The actual width of the body text should be 15.5cm
-\oddsidemargin 1.46cm
-\evensidemargin 1.46cm
+
+% The actual width of the body text must be 15.5cm.
 \textwidth 15.5cm
 
-% Top margin is also 1". Here, I have collapsed the top margin, and
-% allowed the header to consume 1cm, with 0.8cm separating the header
-% from the body.
+% The default side margin is 1" + whatever is set here. 1" == 2.54cm.
+% 
+% To meet the 4.0cm of margin + gutter, set side margins to
+% 1.46cm. (i.e., the default 2.54cm + the additional 1.46cm == 4.0cm.)
+\oddsidemargin 1.46cm
+\evensidemargin 1.46cm
 
-%\topmargin -2.54cm
-%\headheight 1.3cm
-%\headsep 0.5cm
 
+% The default top margin is also 1" (2.54cm), but must be 1.8cm to
+% conform to guidelines. Thus, the top margin must be set to 2.54cm -
+% 0.74cm to meet the required 1.8cm.
 \topmargin -0.74cm
-%\headheight 1.3cm
-%\headsep 0.5cm
 
-%\textheight 26.1cm
+% With 1.8cm at top and bottom, 26.1cm is left for body text. Instead
+% of 26.1cm, I set the text height to (26.1cm - 1.8cm), so the header
+% gets 1.8cm and the body text still fits within guidelines.
 \textheight 24.3cm
 
 
