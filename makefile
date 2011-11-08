@@ -3,16 +3,18 @@ all: dissertation.pdf
 
 
 
-INTRO_FILES=./ch-introduction.tex ./10-introduction/introduction.tex
+INTRO_FILES=\
+	./ch-introduction.tex					\
+	./10-introduction/introduction.tex 		\
+	./10-introduction/thesis_statement.tex
 
 APPEN_FILES=./ch-appendices.tex   ./AA-appendix/appendix.tex
 
-INPUTS=./header.tex                \
-	./footer.tex                   \
-	./abstract.tex 	               \
-	./acknowledgements.tex         \
-	./thesis_statement.tex         \
-	$(INTRO_FILES)                 \
+INPUTS=./header.tex			\
+	./footer.tex			\
+	./abstract.tex			\
+	./acknowledgements.tex	\
+	$(INTRO_FILES)			\
 	./dissertation.tex
 
 
@@ -71,4 +73,4 @@ ch-appendices.pdf: header.tex footer.tex $(APPEN_FILES) $(GRAPHICS) $(APPENDIX_P
 
 # Clean -----------------------------------------------------------------------
 clean:
-	rm -f *.dvi *.log *.aux *.toc *.ps *.pdf *.bbl *.blg *.lof
+	rm -f *.dvi *.log *.aux *.toc *.ps *.pdf *.bbl *.blg *.lof *.cb *.cb2 *.lot

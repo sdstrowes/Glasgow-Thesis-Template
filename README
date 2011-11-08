@@ -1,0 +1,47 @@
+Glasgow Thesis Template for LaTeX.
+Stephen D. Strowes, 2011.
+https://github.com/sdstrowes/Glasgow-Thesis-Template
+
+
+This template is built to follow the style guidelines presented in:
+ http://www.lib.gla.ac.uk/enlighten/theses/Thesis%20preparation%20guidelines.pdf
+
+The example document should build correctly by running 'make'.
+
+The University guidelines are loose in places. Primarily:
+
+* The front-matter description provided by the University is
+  threadbare, and implies a lot of leeway. I do not include a
+  University crest, as one is not required. The front page is much
+  cleaner if it's text-only.
+
+* The dissertation style is not specified. I use the IEEE transactions
+  style mainly because I like it, but it's entirely choice.
+
+Beyond that, I have tried to stick to what is specified. In
+particular, font sizes, page borders. I stick to the font requirements
+for chapter & section headings, much as I'd like to change them.
+
+
+The files are as follows:
+
+* dissertation.tex, which includes:
+  - header.tex, which includes:
+    + glasgowthesis.cls
+    + abstract.tex
+    + acknowledgements.tex
+
+  - 10-introduction/introduction.tex
+    + 10-introduction/thesis_statement.tex
+
+  - AA-appendix/appendix.tex
+
+  - footer.tex
+
+
+There's some stuff in the template that is not strictly necessary to
+build according to the University guidelines (such as the
+TLSind/TLSdel definitions used by texdiff; see
+http://tex.stackexchange.com/questions/10134/ for why.)
+
+There will be bugs, there will be errors. Please feed them back!
