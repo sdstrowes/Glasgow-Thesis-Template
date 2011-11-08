@@ -59,11 +59,17 @@
 % Top margin is also 1". Here, I have collapsed the top margin, and
 % allowed the header to consume 1cm, with 0.8cm separating the header
 % from the body.
-\topmargin -2.54cm
-\headheight 1.3cm
-\headsep 0.5cm
 
-\textheight 26.1cm
+%\topmargin -2.54cm
+%\headheight 1.3cm
+%\headsep 0.5cm
+
+\topmargin -0.74cm
+%\headheight 1.3cm
+%\headsep 0.5cm
+
+%\textheight 26.1cm
+\textheight 24.3cm
 
 
 % Specify page titles for well-known sections.
