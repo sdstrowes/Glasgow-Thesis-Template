@@ -22,7 +22,9 @@ The University guidelines are loose in places. Primarily:
 
 Beyond that, I have tried to stick to what is specified. In
 particular, font sizes, page borders. I stick to the font requirements
-for chapter & section headings, much as I'd like to change them.
+for chapter & section headings, much as I'd like to change
+them. Two-sided printing is supported, by changing the "oneside"
+parameter to "twoside" in header.tex.
 
 
 The files are as follows:

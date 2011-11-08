@@ -49,18 +49,23 @@
 % Right margin: 1.5cm
 % + 2.5cm gutter, making 4.0cm on the binding edge.
 
+% This page described the various parameters that can be set here:
+%  http://amath.colorado.edu/documentation/LaTeX/reference/layout.html
+
 % The actual width of the body text must be 15.5cm.
 \textwidth 15.5cm
 
 % The default side margin is 1" + whatever is set here. 1" == 2.54cm.
+% To meet the 4.0cm of 1.5cm margin + 2.5cm gutter:
 % 
-% To meet the 4.0cm of margin + gutter, set side margins to
-% 1.46cm. (i.e., the default 2.54cm + the additional 1.46cm == 4.0cm.)
-
-%\oddsidemargin 1.46cm
-%\evensidemargin 1.46cm
-
+% On odd pages, the side margin must be set to 1.46cm. (i.e., the
+% default value of 2.54cm + an additional 1.46cm to achieve the 1.5cm
+% margin + 2.5cm gutter.)
 \oddsidemargin 1.46cm
+% 
+% On even pages, the gutter is on the opposing side, to the side
+% margin is set to -1.04cm (i.e., the default value of 2.54cm - the
+% 1.04cm required to achieve the 1.5cm margin.)
 \evensidemargin -1.04cm
 
 
