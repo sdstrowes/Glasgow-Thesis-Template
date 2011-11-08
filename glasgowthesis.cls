@@ -56,8 +56,12 @@
 % 
 % To meet the 4.0cm of margin + gutter, set side margins to
 % 1.46cm. (i.e., the default 2.54cm + the additional 1.46cm == 4.0cm.)
+
+%\oddsidemargin 1.46cm
+%\evensidemargin 1.46cm
+
 \oddsidemargin 1.46cm
-\evensidemargin 1.46cm
+\evensidemargin -1.04cm
 
 
 % The default top margin is also 1" (2.54cm), but must be 1.8cm to
@@ -164,5 +168,3 @@
 % \newenvironment{codelisting}
 % {\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
 % {\end{list}}
-
-% \newcommand{\note}[1]{\emph{\textbf{Scribble:} #1}}
