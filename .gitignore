@@ -1,0 +1,12 @@
+dissertation.pdf
+ch-*.pdf
+*.aux
+*.bbl
+*.blg
+*.cb
+*.cb2
+*.lof
+*.log
+*.lot
+*.toc
+*.fdb_latexmk
