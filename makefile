@@ -58,19 +58,20 @@ buildfunc = \
 	 echo $(BLANK_LINE)
 
 
+.PHONY: dissertation clean
 # Main ------------------------------------------------------------------------
-dissertation.pdf: $(INPUTS) $(GRAPHICS) $(APPENDIX_PLOTS) glasgowthesis.cls
-	$(call buildfunc,dissertation)
+final: 
+	latexmk -pdf dissertation.tex
 
 ch01: ch-introduction.pdf
 chAA: ch-appendices.pdf
 
-ch-introduction.pdf: header.tex footer.tex $(INTRO_FILES) $(GRAPHICS) glasgowthesis.cls
-	$(call buildfunc,ch-introduction)
+ch-introduction.pdf:
+	latexmk -pdf ch-introduction.tex
 
-ch-appendices.pdf: header.tex footer.tex $(APPEN_FILES) $(GRAPHICS) $(APPENDIX_PLOTS) glasgowthesis.cls
-	$(call buildfunc,ch-appendices)
+ch-appendices.pdf:
+	latexmk -pdf ch-appendices.tex
 
 # Clean -----------------------------------------------------------------------
 clean:
-	rm -f *.dvi *.log *.aux *.toc *.ps *.pdf *.bbl *.blg *.lof *.cb *.cb2 *.lot
+	git clean -f -X
