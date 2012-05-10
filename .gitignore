@@ -8,3 +8,4 @@ dissertation.pdf
 *.log
 *.lot
 *.toc
+*.fdb_latexmk
