@@ -113,9 +113,9 @@
     \let\footnote \thanks
     \begin{center}
     {
-       \textsc{\Huge
+       \Huge\textsc{
         \@title
-      }
+      }\par
     }
     \vskip 6em%
     {
