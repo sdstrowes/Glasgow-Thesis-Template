@@ -1,7 +1,9 @@
-\documentclass[oneside]{glasgowthesis}
+\documentclass[twoside]{glasgowthesis}
 % ^^ draft shows overfilled boxes.
 % ^^ replace "oneside" with "twoside" to set the gutter correctly for
 %    two-sided printing.
+% ^^ add "nogutter" option for digital copy (without binding offsets),
+%    if printed copy is twoside, use [twoside,nogutter] for digital copy.
 
 \usepackage{graphics}
 \usepackage{graphicx}
@@ -80,7 +82,7 @@
 
 \maketitle
 
-\newpage
+\cleardoublepage
 
 \input{"abstract.tex"} 
 %\addcontentsline{toc}{chapter}{Abstract}
@@ -89,7 +91,7 @@
 \input{"acknowledgements.tex"} 
 %\addcontentsline{toc}{chapter}{Acknowledgments}
 
-\newpage
+\cleardoublepage
 \vspace*{1.75in}
 \begin{flushright} Dedication. (Is what you need.)\end{flushright}
 
@@ -126,7 +128,7 @@
 \listoffigures
 
 % -----------------------------------------------------------------------------
-\newpage
+\cleardoublepage
 % Reset page numbering
 \pagestyle{fancy}
 \pagenumbering{arabic}
