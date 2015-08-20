@@ -11,11 +11,20 @@
 %  2009/11/12 Modified by Karen Renaud for PhD thesis %
 %  2011/03 Stephen Strowes <sds@dcs.gla.ac.uk> Heavily modified to match %
 %   Glasgow thesis format.%
+%  2015/08/12 Daniel Boland <email@dannyboland.com> Fixed title line spacing, %
+%   chapters openright in twoside, uses geometry package for margins with %
+%   'nogutter' option for digital copy.
 % ]
 \ProvidesClass{glasgowthesis}
+\PassOptionsToPackage{bindingoffset=2.5cm, left=1.5cm, right=1.5cm, top=1.8cm, bottom=1.8cm, includehead, includefoot}{geometry}
+\DeclareOption{nogutter}{
+  \PassOptionsToPackage{bindingoffset=0cm, left=2.75cm, right=2.75cm, top=1.8cm, bottom=1.8cm, includehead, includefoot}{geometry}
+}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
-\LoadClass[12pt,a4paper]{book}
+\LoadClass[12pt,a4paper,openright]{book}
+
+\usepackage{geometry}
 
 \usepackage{ifpdf}
 \ifpdf
@@ -61,18 +70,18 @@
 % On odd pages, the side margin must be set to 1.46cm. (i.e., the
 % default value of 2.54cm + an additional 1.46cm to achieve the 1.5cm
 % margin + 2.5cm gutter.)
-\oddsidemargin 1.46cm
+%\oddsidemargin 1.46cm
 % 
 % On even pages, the gutter is on the opposing side, to the side
 % margin is set to -1.04cm (i.e., the default value of 2.54cm - the
 % 1.04cm required to achieve the 1.5cm margin.)
-\evensidemargin -1.04cm
+%\evensidemargin -1.04cm
 
 
 % The default top margin is also 1" (2.54cm), but must be 1.8cm to
 % conform to guidelines. Thus, the top margin must be set to 2.54cm -
 % 0.74cm to meet the required 1.8cm.
-\topmargin -0.74cm
+%\topmargin -0.74cm
 
 % With 1.8cm at top and bottom, 26.1cm is left for body text. Instead
 % of 26.1cm, I set the text height to (26.1cm - 1.8cm), so the header
@@ -113,9 +122,9 @@
     \let\footnote \thanks
     \begin{center}
     {
-       \textsc{\Huge
+       \Huge\textsc{
         \@title
-      }
+      }\par
     }
     \vskip 6em%
     {
